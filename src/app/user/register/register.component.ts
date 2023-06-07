@@ -32,6 +32,7 @@ export class RegisterComponent {
       }
     }else{
       console.log('loi 2');
+      console.log('loi 2');
     }
 
   }
