@@ -12,9 +12,9 @@ import { MessageService } from 'src/app/services/message.service';
 export class RegisterComponent {
   public user! : User;
   public message ='';
-  contructor(private httpService : HttpService,
-    public messageService : MesageService,){
-      this.user = new User('', '', '', '');
+  constructor(private httpService : HttpService,
+    public messageService : MessageService,){
+      this.user = new User(0, '', '', '');
     }
 
  createUser(userForm: any){
@@ -26,11 +26,12 @@ export class RegisterComponent {
               + this.user.username;
         this.httpService.postUser(user).subscribe((data)=>{
           console.log('postuser',data);})
-      this.user = new User('','','','');
+      this.user = new User(0,'','','');
       }else{
         console.log('loi 1');
       }
     }else{
+      console.log('loi 2');
       console.log('loi 2');
     }
 
