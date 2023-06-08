@@ -1,0 +1,19 @@
+<p>list-food works!</p>
+<div class="container">
+  <h2>List of Foods</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let food of foods">
+      <div class="card">
+        <img src="{{food.image}}" alt="{{food.name}}" style="width:100%">
+        <div class="container">
+          <h4><b>{{food.name}}</b></h4>
+          <p>{{food.description}}</p>
+          <p>Price: {{food.price}}</p>
+          <button class="btn btn-info" (click)="editFood(food)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteFood(food)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-success" (click)="addFood()">Add Food</button>
+</div>

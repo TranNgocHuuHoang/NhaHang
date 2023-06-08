@@ -1,0 +1,19 @@
+<p>create-food works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+  </div>
+
+  <div>
+    <label for="price">Price:</label>
+    <input type="number" id="price" formControlName="price">
+  </div>
+
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+
+  <button type="submit">Create Food</button>
+</form>

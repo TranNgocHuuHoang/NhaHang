@@ -1,0 +1,16 @@
+/* Thiết lập font chữ */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Thiết lập màu sắc */
+.container {
+  background-color: #f2f2f2;
+}
+
+/* Thiết lập kích thước */
+.btn {
+  width: 100px;
+  height: 40px;
+}

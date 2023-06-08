@@ -1,0 +1,17 @@
+
+<!-- Hiển thị danh sách món ăn -->
+<div *ngFor="let food of foods">
+  <p>{{ food.name }}</p>
+  <p>{{ food.price }}</p>
+</div>
+
+<!-- Thêm mới món ăn -->
+<form (submit)="addFood()">
+  <label for="name">Tên món ăn:</label>
+  <input type="text" id="name" [(ngModel)]="newFood.name">
+
+  <label for="price">Giá:</label>
+  <input type="number" id="price" [(ngModel)]="newFood.price">
+
+  <button type="submit">Thêm mới</button>
+</form>
