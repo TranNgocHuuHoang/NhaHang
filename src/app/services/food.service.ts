@@ -32,6 +32,7 @@ export class FoodService {
       return ObservableOf({msg:'Food with code '+
       food.code + ' successfully created'});
     }
+
     toggleFavorite(food :Food) : Observable<Food>{
       let foundFood = this.food.find(each => each.code === food.code);
       if (foundFood) {
